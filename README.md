@@ -1,14 +1,22 @@
 # widget_factory
 
-A new Flutter package project.
+Flutter package providing factory abstract class for creating widgets.
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+```dart
+class CountWidgetFactoryData {
+  final int count;
+  CountWidgetFactoryData(this.count);
+}
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+class ConutWidgetFactory implements WidgetFactory<CountWidgetFactoryData> {
+  @override
+  Widget createWidget({CountWidgetFactoryData? data}) {
+    final text = data?.count.toString() ?? '';
+    return Container(
+      child: Text('count: $text'),
+    );
+  }
+}
+```
