@@ -2,12 +2,12 @@ library widget_factory;
 
 import 'package:flutter/widgets.dart';
 
-// ignore: one_member_abstracts
+/// Abstract class of widget factory
 abstract class WidgetFactory<TWidgetData> {
   Widget createWidget({TWidgetData? data});
 }
 
-// ignore: one_member_abstracts
+/// Abstract class of widget factory with async creation
 abstract class AsyncWidgetFactory<TWidgetData> {
   Future<Widget> createWidget({TWidgetData? data});
 }
