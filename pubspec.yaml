@@ -1,8 +1,7 @@
 name: widget_factory
-description: A new Flutter package project.
-version: 0.0.1
-author: Nikita Krasavin
-homepage:
+description: Flutter package providing factory abstract class for creating widgets.
+version: 0.0.1+1
+repository: https://github.com/Mol0ko/widget_factory
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
